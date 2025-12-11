@@ -1,44 +1,31 @@
 # 99Acres Seller Search Prototype
 
-A web-based prototype application for searching and viewing seller information from 99Acres, including Google ratings, review counts, and recent reviews. The application features an intelligent confidence scoring system to help users assess seller reliability.
+A lightweight, web-based tool designed to bridge the trust gap in real estate transactions. This prototype enables users to instantly verify 99Acres sellers by cross-referencing their profiles with Google Business data, providing a holistic view of seller reputation.
 
-## Demo Link - [Link](https://siddharthmall.github.io/99Acres---Product-Internship/)
+## Demo Link - [Live Prototype](https://siddharthmall.github.io/99Acres---Product-Internship/)
 
-## 🚀 Features
+## 🚀 Key Features
 
-- **Smart Search**: Real-time autocomplete suggestions as you type seller names
-- **Alphabet-based Search**: Suggestions appear based on alphabetical matching
+- **Smart Search**: Real-time autocomplete - The search bar anticipates user intent, providing immediate suggestions as you type.
+- **Alphabetical Sorting:**: Suggestions are logically organized via alphabetical matching to ensure quick discovery of specific sellers.
 - **Seller Information Display**: 
   - Seller name and Google Business name
   - Google rating with visual star representation
   - Total review count
   - Most recent 3 reviews with dates
 - **Confidence Score System**: Automated scoring (0-100) based on rating and review data
-- **Responsive Design**: Works seamlessly on desktop and mobile devices
-
-
-## 📁 File Structure
-
-```
-99Acres/
-├── index.html          # Main HTML file
-├── style.css           # Stylesheet for all styling
-├── index.js            # JavaScript logic and data
-└── README.md           # This file
-```
 
 ## 🛠️ Technologies Used
 
 - **HTML5**: Structure and markup
-- **CSS3**: Styling, animations, and responsive design
-- **JavaScript (Vanilla)**: Logic, data handling, and DOM manipulation
+- **CSS3**: Custom styling, smooth animations, and responsive layouts.
+- **JavaScript**: Logic, data handling, and DOM manipulation
 
+### Usage Guide
 
-### Usage
-
-1. **Search for a Seller**: Type a seller name in the search box
+1. **Search for a Seller**: Begin typing a seller's name in the main search bar.
 2. **View Suggestions**: As you type, matching seller names will appear in a dropdown
-3. **Select a Seller**: Click on a suggestion or use arrow keys + Enter to select
+3. **Select**: Choose the correct seller from the smart dropdown list using your mouse or keyboard
 4. **View Results**: The seller's information, rating, reviews, and confidence score will be displayed
 
 ## 📊 Confidence Score Calculation
@@ -109,27 +96,3 @@ The application uses seller data from a CSV file containing:
 - Total review counts
 - Most recent 3 reviews with dates
 
-## 🔧 Customization
-
-### Adding New Sellers
-
-Edit the `sellersData` array in `index.js` to add new seller entries:
-
-```javascript
-{
-    'Seller_Name (as shown on 99acres)': 'Your Seller Name',
-    'Google_Business_Name': 'Business Name',
-    'Google_Rating (e.g., 4.3/5)': '4.5',
-    'Total_Review_Count': '100',
-    'Review_1_Text': 'Review text...',
-    'Review_1_Date': '2 days ago',
-    // ... more fields
-}
-```
-
-### Modifying Confidence Score Logic
-
-Edit the `calculateConfidenceScore()` function in `index.js` to adjust:
-- Point weights for rating vs. review count
-- Review count thresholds
-- Scoring formula
