@@ -28,11 +28,22 @@ A lightweight, web-based tool designed to bridge the trust gap in real estate tr
 3. **Select**: Choose the correct seller from the smart dropdown list using your mouse or keyboard
 4. **View Results**: The seller's information, rating, reviews, and confidence score will be displayed
 
-## 📊 Confidence Score Calculation
+## 📝 Data Source
+
+The application uses seller data from a CSV file containing:
+- Seller names (as shown on 99Acres)
+- Google Business names
+- Google ratings
+- Total review counts
+- Most recent 3 reviews with dates
+
+## 📊 Highlight Feature: The Confidence Score
+
+To go beyond simple star ratings, I developed a proprietary Confidence Score System. This feature analyzes available data to assign a reliability score from 0 to 100. This helps users differentiate between a seller with a 5.0 rating (but only 1 review) and a seller with a 4.6 rating (but 900+ reviews).
 
 The confidence score is calculated based on **two factors** that determine seller reliability:
 
-### Formula
+### How It Works
 
 **Total Score = Rating Points + Review Count Points (0-100 points)**
 
@@ -43,10 +54,7 @@ The Google rating is converted from a 0-5 star scale to a 0-60 point scale.
 **Formula:** `(Rating / 5) × 60`
 
 **Examples:**
-- 5.0 stars → (5.0 / 5) × 60 = **60 points**
-- 4.6 stars → (4.6 / 5) × 60 = **55.2 points** → **55 points** (rounded)
 - 4.0 stars → (4.0 / 5) × 60 = **48 points**
-- 3.5 stars → (3.5 / 5) × 60 = **42 points**
 
 ### Factor 2: Review Count (0-40 points, 40% weight)
 
@@ -87,12 +95,5 @@ The review count uses a logarithmic scale with diminishing returns to prevent se
 | 0-39        | Low        | Red   | ⚠    | Low confidence - High risk       |
 
 
-## 📝 Data Source
 
-The application uses seller data from a CSV file containing:
-- Seller names (as shown on 99Acres)
-- Google Business names
-- Google ratings
-- Total review counts
-- Most recent 3 reviews with dates
 
