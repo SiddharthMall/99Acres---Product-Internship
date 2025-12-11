@@ -2,7 +2,7 @@
 
 A web-based prototype application for searching and viewing seller information from 99Acres, including Google ratings, review counts, and recent reviews. The application features an intelligent confidence scoring system to help users assess seller reliability.
 
-## Demo Link - [Link](ht)
+## Demo Link - [Link](https://siddharthmall.github.io/99Acres---Product-Internship/)
 
 ## 🚀 Features
 
