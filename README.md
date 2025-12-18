@@ -19,7 +19,7 @@ A lightweight, web-based tool designed to bridge the trust gap in real estate tr
 
 - **HTML5**: Structure and markup
 - **CSS3**: Custom styling, smooth animations, and responsive layouts.
-- **JavaScript**: Logic, data handling, and DOM manipulation
+- **JavaScript**: Logic and data handling
 
 ### Usage Guide
 
